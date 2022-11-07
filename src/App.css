@@ -25,8 +25,8 @@ h1{
 
 #lightbulb{
   position: fixed;
-  top: 5%;
-  right: 5%;
+  top: 3%;
+  right: 2%;
   z-index: 100;
 
   cursor: pointer;
@@ -34,8 +34,8 @@ h1{
 
 #darkbulb{
   position: fixed;
-  top: 5%;
-  right: 5%;
+  top: 3%;
+  right: 2%;
   z-index: 100;
   
   cursor: pointer;
@@ -52,34 +52,56 @@ h1{
 
 #lightglow{
   position: fixed;
-  top:9%;
-  right: 7%;
-  width: 40px;
-  height: 40px;
+  top:7%;
+  right: 4%;
+
+  width: 20px;
+  height: 20px;
+
   border-radius: 50%;
+
   background-color: #fff;
   box-shadow:
-    0 0 60px 30px rgb(235, 234, 202),  /* inner white */
-    0 0 100px 60px rgb(231, 233, 101), /* middle magenta */
-    0 0 140px 90px rgb(255, 238, 4); /* outer cyan */
+  0 0 60px 30px rgb(235, 234, 202),
+  0 0 100px 40px rgb(231, 233, 101),
+  0 0 140px 70px rgb(255, 238, 4);
 
-    animation: fadeIn .4s;
+  animation: fadeIn .4s;
 }
 
 #darkglow{
   position: fixed;
-  top:9%;
-  right: 7%;
-  width: 40px;
-  height: 40px;
+  top:7%;
+  right: 4%;
+
+  width: 20px;
+  height: 20px;
+
   border-radius: 50%;
+
   background-color: #fff;
   box-shadow:
-    0 0 60px 30px rgb(65, 3, 3),  /* inner white */
-    0 0 100px 60px rgb(56, 4, 4), /* middle magenta */
-    0 0 140px 90px rgb(170, 5, 14) ;/* outer cyan */
+  0 0 60px 30px rgb(65, 3, 3),
+  0 0 100px 60px rgb(56, 4, 4),
+  0 0 140px 70px rgb(170, 5, 14) ;
 
-    animation: fadeIn .4s;
+  animation: fadeIn .4s;
+}
+
+#lighpumpkin{
+  position: fixed;
+  bottom:7%;
+  left: 4%;
+
+  animation: fadeIn 1s;
+}
+
+#darkpumpkin{
+  position: fixed;
+  bottom:7%;
+  left: 4%;
+  
+  animation: fadeIn 1s;
 }
 
 .sumir{

@@ -14,9 +14,11 @@ function App() {
     if (theme === 'light'){
       document.getElementById("darkbulb")?.classList.remove("sumir")
       document.getElementById("darkglow")?.classList.remove("sumir")
+      document.getElementById("darkpumpkin")?.classList.remove("sumir")
     } else{
       document.getElementById("lightbulb")?.classList.remove("sumir")
       document.getElementById("lightglow")?.classList.remove("sumir")
+      document.getElementById("lighpumpkin")?.classList.remove("sumir")
     }
   }
 
@@ -24,21 +26,45 @@ function App() {
     if (theme === 'light'){
       document.getElementById("darkbulb")?.classList.add("sumir")
       document.getElementById("darkglow")?.classList.add("sumir")
+      document.getElementById("darkpumpkin")?.classList.add("sumir")
     } else{
       document.getElementById("lightbulb")?.classList.add("sumir")
       document.getElementById("lightglow")?.classList.add("sumir")
+      document.getElementById("lighpumpkin")?.classList.add("sumir")
     }
   },[theme])
 
   return (
    <body data-theme = {theme}>
-      <h1>I am a string</h1>
+      <header>
 
-          <div id='lightglow'></div>
-          <div id='darkglow'></div>
-          <img id='lightbulb' onClick={switchTheme} src="/images/light-bulb.png" alt="" />
-          <img id='darkbulb' onClick={switchTheme} src="/images/dark-bulb.png" alt="" />
-      
+        <nav>
+
+        </nav>
+        
+      </header>
+
+      <main>
+
+      </main>
+
+
+      <footer>
+
+      </footer>
+
+
+      <aside id='themeschema'>
+        <div id='lightglow'></div>
+        <div id='darkglow'></div>
+
+        <img id='lightbulb' onClick={switchTheme} src="/images/light-bulb.png" alt="lantern turn on" />
+        <img id='darkbulb' onClick={switchTheme} src="/images/dark-bulb.png" alt="lantern turn off" />
+
+        <img id='lighpumpkin' src="/images/light-pumpkin.png" alt="cute pumpkin" />
+        <img id='darkpumpkin' src="/images/dark-pumpkin.png" alt="dark pumpkin" />
+      </aside>
+        
    </body>
   );
 }
