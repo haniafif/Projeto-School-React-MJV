@@ -1,10 +1,15 @@
-main{
-  height: 100%;
-  width: 100%;
+body{
+  height: 100vh;
+  width: 100vw;
   
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: var(--background);
+
+  margin: 0;
+  padding: 0;
 }
 
 h1{
@@ -13,8 +18,70 @@ h1{
 
 /* @@@@@@@@ THEME TOGGLER CSS @@@@@@@@@@ */
 
-#themeToggler{
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#lightbulb{
   position: fixed;
   top: 5%;
   right: 5%;
+  z-index: 100;
+
+  cursor: pointer;
+}
+
+#darkbulb{
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 100;
+  
+  cursor: pointer;
+  animation: ease-in;
+}
+
+#lightbulb:hover{
+  transform: scale(1.05);
+}
+
+#darkbulb:hover{
+  transform: scale(1.05);
+}
+
+#lightglow{
+  position: fixed;
+  top:9%;
+  right: 7%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+    0 0 60px 30px rgb(235, 234, 202),  /* inner white */
+    0 0 100px 60px rgb(231, 233, 101), /* middle magenta */
+    0 0 140px 90px rgb(255, 238, 4); /* outer cyan */
+
+    animation: fadeIn .4s;
+}
+
+#darkglow{
+  position: fixed;
+  top:9%;
+  right: 7%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+    0 0 60px 30px rgb(65, 3, 3),  /* inner white */
+    0 0 100px 60px rgb(56, 4, 4), /* middle magenta */
+    0 0 140px 90px rgb(170, 5, 14) ;/* outer cyan */
+
+    animation: fadeIn .4s;
+}
+
+.sumir{
+  display: none;
 }
